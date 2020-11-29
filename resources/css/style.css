@@ -1,0 +1,528 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;  
+}
+
+html
+body{
+    background-color: #fff;
+    color: #605d5d;
+    font-family: "lato","arial",sans-serif;
+    font-weight:300;
+    font-size:20px;
+    text-rendering:optimizeLegibility;
+    overflow-x: hidden;
+        
+}
+
+.row{
+    max-width:1140px;
+    margin:0 auto;
+   
+} 
+
+header{
+    /* by adding the gradient we reduced the tranperency of the img*/
+    background-image:linear-gradient(rgba(0, 0, 0, 0.52),rgba(0, 0, 0, 0.52)), url(img/hero.jpg);
+    background-size:cover;
+    
+    background-position:center;   
+    height:100vh;
+    background-attachment: fixed;
+}
+/*this will set the text in the hero box class where we want*/ 
+.herotextbox{
+    position:absolute;
+    width:1140px;
+    top:50%;
+    left:50%;
+    /*this transform element is use to set the text in the middle*/
+    transform:translate(-50%, -50%);
+    
+}
+h1,h2,h3
+{
+    font-weight:300;
+    text-transform: uppercase;/*this is done to make the text capital */
+    word-spacing: 4px;
+}
+h1{/* we have set the margin 0 because some white space was comming above*/
+    margin-top: 0; 
+    margin-bottom: 0;
+    color: #fff;
+    font-size:240%;
+    
+}
+h2{font font-size: 180%;
+    word-spacing:2px;
+    text-align: center;
+    margin-bottom: 30px;
+    
+    
+    }
+h2:after{/*due to this after every h2 element there comes aline*/
+    display:block;
+    height:2px;
+    background-color: #e67e22;
+    content:"  ";/*this is done to put underline under h2*/
+    width:100px;
+    margin:0 auto;
+    margin-top: 30px;
+}
+
+}
+h3{
+    font-size:110%;
+    margin-bottom: 15px;
+    word-spacing: 2px;
+}
+
+/*btn formating   this is common for both the button*/
+.btn:link, /*this is for normal link*/
+.btn:visited,/*this is for visited link*/
+input[type=submit]
+{
+    display: inline-block;/*padding means space inside the button and the wall*/
+    padding:10px 30px;/*top and left  
+    throgh margin there comes space b/w 2 buttons*/
+    margin-right: 10px;
+    font-weight: 300;
+    text-decoration:  none;
+     /*through txt decoration the underline of the link is removed*/
+     border-radius: 200px;/*if we want to round the corners*/
+  /* if we want to delay the transition*/
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
+    
+}
+/*-----para*/
+.long-copy{
+    line-height: 140%;
+    width:70%;
+    margin-left:15%
+     
+}
+
+
+/* formating of the particular button     
+we picked background color through flatuicolor.com*/
+.btnfull:link,
+.btnfull:visited,
+input[type=submit]{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    
+}
+.btnfull:hover,
+.btnfull:active,
+input[type=submit]:hover
+{
+   background-color: #fff;
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    
+}
+.btnghost:link,
+.btnghost:visited{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+/*for darker shade of a color we can visit 0to255.com*/
+.btnghost:hover,
+.btnghost:active{
+    background-color: #e67e22;
+    color:#fff;}
+.logo
+{
+    height:100px;
+    width: auto;
+    float:left;
+    margin-top:10px;
+    
+}
+.logoblack{display: none;
+height:50px;
+    width: auto;
+    float:left;
+    margin:5px ;}
+/*main nav*/
+.mainnav{
+    float:right; 
+    list-style: none;/*Tis is done to get rid of bullet pts*/
+    margin-top:55px;
+    
+    
+    
+}
+/*It means all the LI element*/
+.mainnav li{
+    display: inline-block;/*Through this aal the list element come in the same line*/
+    margin-left: 40px;
+    margin-top: 10;
+     
+}
+.mainnav li a:link,
+.mainnav li a:visited{
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size=90%;
+    
+}.mainnav li a:hover,
+.mainnav li a:active{
+    border-bottom:2px solid #e67e22;
+    transition: border-bottom 0.2s;
+    padding-bottom:8px; 
+}
+/*sticky nav*/
+.sticky{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+   background-color:#fff ;
+    box-shadow: 0 2px 2px #e2e2e2;
+        /* x axis y axis blur color     rgba(242, 238, 238, 0.98*/
+    
+    color:#000;
+    z-index:9999;/*this is done so that sticky should not go behind sections*/
+    
+    
+    
+}
+.sticky li a:link,
+.sticky li a:visited
+{
+    color: #000;
+    
+}
+
+
+
+/*.sticky .logoblack{display: block;}*/
+.sticky .logoblack{
+    display:block;
+    height:50px;
+    width: auto;
+    float:left;
+    margin-top:10px;
+    }
+.sticky .logo{
+    display:none;
+    
+}
+.mainnav{
+   
+    margin-top:15px;
+}
+
+
+
+
+
+
+section{
+    padding:80px 0;
+    
+}
+.long-copy{
+    margin-bottom: 40px;
+    
+}
+.box{
+    padding:1px;
+}
+.box p{
+    font-size:90%;
+    line-height: 145%;/*space b/w lines*/
+    
+}
+.box img{
+    height:60px;
+    margin-left:60px;
+    margin-bottom:10px;
+    
+    
+}
+/*Formating of the images*/
+.meals-showcase{
+    list-style: none;
+    width:100%;
+    
+}
+.meals-showcase li{
+   display:inline-block;
+    float:left;
+    width:25%;
+    /*we have done 25% bcoz we want only 4 img and 25*4=100*/
+    
+}
+.meal-photo{
+    width: 100%;
+    overflow:hidden;/*this is done to set the img size*/
+    background-color: #000;/*this is done to darker the img*/
+}
+.meal-photo img{
+    width:100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s opacity 0.5s;
+    opacity: 0.7; /*to make it lighter*/
+}
+.section-meals{
+    padding:0;
+}/*this is done for the transition when mouse hover the img*/
+.meal-photo img:hover{
+    transform:scale(1.03);
+    opacity: 1;
+}
+/*Formating of how it works section*/
+.section-steps{
+    background-color: #ededed;
+}
+.steps-box{
+    margin-top: 30px;
+}
+/*this means the first one */
+.steps-box:first-child{
+    text-align: right;
+    padding-right:3%
+    
+}
+/*this means the second one */
+.steps-box:last-child{
+    padding-left: 3%
+    
+}
+.appscreen{
+    width:40%; 
+}
+.worksteps{
+    margin-bottom:50px; 
+}
+.workstep:last-of-type{
+    margin-bottom: 80px;
+    
+}
+.worksteps div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    border-radius:50px;
+    height:50px;
+    width:50px;/*height and width is set to make vircle*/
+    text-align: center;
+    padding-top: 5px;
+    float:left;
+    margin-right: 10px;
+    font-size:150%;
+    
+      }
+.btn-app img{
+    height:50px;
+    margin-right:10px;
+    margin-bottom: 10px;
+}
+ a:hover{
+    border-bottom:2px solid #e67e22;
+}
+/*Editing of tthe cities secttion*/
+.box1 img{
+    height:60%;
+    width: 60%
+    
+        
+}
+.citi-feature img{
+    height:20px;
+    width:20px;
+    margin-right:10px;
+    margin-top:5px;
+    vertical-align: middle;
+    
+}
+.location {
+    margin-bottom: 20px;
+}
+/*foramting the cotomer section*/
+.section-testimonials{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/back-customers.jpg);
+    background-size:cover;
+    color:#fff;
+    background-attachment: fixed;/* this is a cool property through it the image remains at sme place when we scorl*/
+}
+blockquote{
+    padding:2%;
+    font-style:italic;
+    line-height: 145%
+}/*to put the quotion mark*/
+blockquote:before{
+   
+    content:"\201C";
+    font-size:400%;
+    
+    
+}
+cite{
+    font-size:90%;
+    
+    
+}
+cite img{
+    height:50px;
+    border-radius:50%;
+    vertical-align: middle;
+    margin-right:10px;
+    
+}
+/*formating the sign up section*/
+
+.feature li img{
+    height:20px;
+    width: 20px;
+    margin-right: 10px;
+     
+}
+.type{
+    padding-left: 75px
+}
+.section-plans{
+    background-color: #ededed;
+}
+
+.planbox{
+    background-color: #fff;
+    border-radius:5px;
+    width:90%;
+    box-shadow: 0 2px 2px #f8f7f7;
+    
+    padding-bottom: 20px;
+    
+    
+}
+.planbox div{
+    padding:10px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    
+    
+}
+.plan-price{
+    font-size:300%;
+    color:#e67e22;
+    
+}
+.plan-price-meal{
+    font-size: 80%;
+    
+    
+}
+.plan-price span{
+    font-size:30%;
+    font-weight: 300;
+}
+
+.planbox ul{
+    list-style: none;
+}
+.planbox div:last-child{
+    text-align:center;
+}
+.planbox div:first-child{
+    background-color:#f7f3f3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/*formating of the form*/
+.section-plans{margin-bottom: auto;
+    
+}
+
+.contactform{
+    width:60%;
+    margin:0 auto; /*this is done to center it*/
+}
+
+input[ type=text],
+input[ type=email],
+select,
+textarea {
+    width:100%;
+    padding:7px;
+    
+    border-radius:10px;
+    border: 1px solid #ccc;
+}
+textarea{
+    height:100px;
+}
+input[type=checkbox]{
+    margin:10px 5px 10px 0
+}
+/*Footer formating*/
+footer{
+    background-color: #333;
+    padding:60px;
+}
+.footernav{
+    list-style: none;
+    float:left;
+    
+}
+.social-links{
+    list-style: none;
+    float:right;
+    
+}
+.footernav li,
+.social-links li {
+    display:inline-block;
+    margin-right: 25px;
+}
+.footernav li a{
+    color: #e67e22;
+    text-decoration: none;
+}
+.footernav li a:hover{
+    color: #fff;
+    
+    
+}
+footer p {
+    text-align: center;
+    color: #ccc;
+    margin-top:30px;
+}
+.social-links li img:hover{
+    transform:scale(1.2);
+    background-color: white;
+    
+    
+}
+/*animation*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated{
+    opacity: 1;
+}
+/*mobile navigation*/
+.mobile-nav-icon{
+    float: right;
+    cursor:pointer;
+    margin-top:30px;
+   display:none;
+}
+.mobile-nav-icon img{
+    
+}
+
+
+
+
+    
